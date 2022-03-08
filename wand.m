@@ -1,11 +1,9 @@
-wand: main.o schritte.o antwort.o
-  cc -c wand main.o schritte.o antwort.o
-
-main.o: main.c
-  cc -c main.c
-
-antwort.o: antwort.c
-  cc -c antwort.c
-
-schritte.o: schritte.c
+all:main.o schritte.o antwort.o wand
+wand.o:main.c
   cc -c schritte.c
+schritte.o:schritte.c
+  cc -c antwort.cc
+antwort.o:antwort.c
+  cc -c antwort.cc
+wand:main.o schritte.o antwort.o
+  cc -o wand main.o schritte.o antwort.o
