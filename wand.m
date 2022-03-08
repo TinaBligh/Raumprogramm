@@ -4,6 +4,6 @@ wand.o:main.c
 schritte.o:schritte.c
   cc -c antwort.cc
 antwort.o:antwort.c
-  cc -c antwort.cc
+  cc -c antwort.c
 wand:main.o schritte.o antwort.o
   cc -o wand main.o schritte.o antwort.o
